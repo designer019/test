@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <select id="fontSize">
+            
+        </select>
+        <button onclick="changeFontSize()">Click me</button>
+        <p id ="test">I am a simple paragraph</p>
+        <script>
+            var select = document.getElementById("fontSize");
+            
+            for (var i = 10; i <= 800; i += 2) {
+                var option = document.createElement("option");
+                option.innerHTML = i;
+                select.appendChild(option);
+            }
+            
+            function changeFontSize() {
+                var par = document.getElementById("test");
+                var fontSize = select.value;
+                par.style.fontSize = "" + fontSize + "px";
+            }
+         
+        </script>
+    </body>
+
+
+
+</html>
