@@ -7,3 +7,9 @@ body {
     some code...
     added by Roman...
 }
+.block {
+    width: 200px;
+    height: 100px;
+    background: #00f;
+    margin: 20px;
+}

@@ -8,24 +8,27 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <select id="fontSize">
-            
+        <button onclick="createBlock()">Click me</button>
+        <select id="choice">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
         </select>
-        <button onclick="changeFontSize()">Click me</button>
-        <p id ="test">I am a simple paragraph</p>
+        <center id="block">
+            
+        </center>
+            
         <script>
-            var select = document.getElementById("fontSize");
-            
-            for (var i = 10; i <= 800; i += 2) {
-                var option = document.createElement("option");
-                option.innerHTML = i;
-                select.appendChild(option);
-            }
-            
-            function changeFontSize() {
-                var par = document.getElementById("test");
-                var fontSize = select.value;
-                par.style.fontSize = "" + fontSize + "px";
+            var center = document.getElementById("block");
+                        
+            function createBlock() {
+                var select = document.getElementById("choice");
+                var numberOfBlocks = select.value;
+                 for (var i = 0; i <= numberOfBlocks; i++) {
+                    var div = document.createElement("div");
+                    div.setAttribute.class = "block";
+                    center.appendChild(div);
+                 }
             }
          
         </script>
